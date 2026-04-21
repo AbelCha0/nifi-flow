@@ -146,7 +146,7 @@
       "retryCount" : 10,
       "runDurationMillis" : 0,
       "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "1 min",
+      "schedulingPeriod" : "10 min",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
@@ -274,6 +274,6 @@
   "snapshotMetadata" : {
     "author" : "3e0f915d-52dd-4d91-83cd-efdd9ce9031a",
     "flowIdentifier" : "test",
-    "timestamp" : 1776752401843
+    "timestamp" : 1776752451726
   }
 }
