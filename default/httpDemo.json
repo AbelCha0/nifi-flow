@@ -1,4 +1,14 @@
 {
+  "externalControllerServices" : {
+    "4f1be558-3b78-3886-8ee7-13c93cac97a3" : {
+      "identifier" : "4f1be558-3b78-3886-8ee7-13c93cac97a3",
+      "name" : "StandardHttpListenerService"
+    },
+    "815dbaba-69c3-31aa-89c5-3feb6836f573" : {
+      "identifier" : "815dbaba-69c3-31aa-89c5-3feb6836f573",
+      "name" : "DBCPConnectionPool"
+    }
+  },
   "flow" : {
     "createdTimestamp" : 1778746769196,
     "description" : "",
@@ -7,5 +17,1313 @@
     "name" : "httpDemo",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "0cc0b776-03ae-35f5-becd-4b7f296210d7",
+        "name" : "LogMessage",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "0d566496-8207-360b-a378-143c28226074",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "bdb4f18c-ce04-325a-9f56-ab88efbdaf92",
+        "name" : "HandleHttpResponse",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "0989d5fe-13fc-33e5-8dd2-828125bc5dca",
+        "name" : "ExecuteMappingScript",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "300f8119-162e-3ad4-8d92-e1e43f1c21e0",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "b84f3f61-289c-3d40-a531-4eae8be122b6",
+        "name" : "HandleHttpRequest",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "599c0eed-019b-1000-11b1-f750b1a4efb3",
+        "name" : "LogMessage",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "3dd8ec2c-05bd-352e-917c-36c3e8d16549",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "599bfab7-019b-1000-eb1e-6d5562cd33d2",
+        "name" : "HandleHttpResponse",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "8d510d38-5d31-337e-b19a-bf2dbba10b29",
+        "name" : "InvokeHTTP",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b98fb94c-37fc-39ef-931f-3463396ab764",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f7cbe311-88bf-3dfa-a9c8-4dcc3deb38b7",
+        "name" : "AssociationQuery",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "d20a1c68-019d-1000-c82c-f64bd61df5cb",
+        "name" : "LogMessage",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "0ac533a8-6894-388a-9df4-425e7e40b95d",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "Response" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "8d510d38-5d31-337e-b19a-bf2dbba10b29",
+        "name" : "InvokeHTTP",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "bdb4f18c-ce04-325a-9f56-ab88efbdaf92",
+        "name" : "HandleHttpResponse",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "58361464-dd8b-3206-925f-9306d6d87d41",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "0989d5fe-13fc-33e5-8dd2-828125bc5dca",
+        "name" : "ExecuteMappingScript",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "599bfab7-019b-1000-eb1e-6d5562cd33d2",
+        "name" : "HandleHttpResponse",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "3b714cf6-35e5-3a55-a538-f713a359a729",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "599be22a-019b-1000-d718-5f6d1e606fd9",
+        "name" : "HandleHttpRequest",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "46d062f5-9350-33f7-9e1c-aa2bee1ede97",
+        "name" : "ReplaceText",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "5c0916e2-d3c2-363c-9d94-84a652023845",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "0989d5fe-13fc-33e5-8dd2-828125bc5dca",
+        "name" : "ExecuteMappingScript",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "bdb4f18c-ce04-325a-9f56-ab88efbdaf92",
+        "name" : "HandleHttpResponse",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ba07f677-cc62-3ed7-b455-2f3bee644e58",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "46d062f5-9350-33f7-9e1c-aa2bee1ede97",
+        "name" : "ReplaceText",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : {
+      "4f1be558-3b78-3886-8ee7-13c93cac97a3" : {
+        "identifier" : "4f1be558-3b78-3886-8ee7-13c93cac97a3",
+        "name" : "StandardHttpListenerService"
+      },
+      "815dbaba-69c3-31aa-89c5-3feb6836f573" : {
+        "identifier" : "815dbaba-69c3-31aa-89c5-3feb6836f573",
+        "name" : "DBCPConnectionPool"
+      }
+    },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "HttpDemo",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-http-nar",
+        "group" : "cn.com.yisquare",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "bdb4f18c-ce04-325a-9f56-ab88efbdaf92",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "HandleHttpResponse",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 568.0,
+        "y" : -96.0
+      },
+      "properties" : {
+        "Status Code" : "200",
+        "HTTP Listener Service" : "4f1be558-3b78-3886-8ee7-13c93cac97a3",
+        "Content-Type" : "application/json"
+      },
+      "propertyDescriptors" : {
+        "Status Code" : {
+          "displayName" : "Status Code",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Status Code",
+          "sensitive" : false
+        },
+        "HTTP Listener Service" : {
+          "displayName" : "HTTP Listener Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "HTTP Listener Service",
+          "sensitive" : false
+        },
+        "Content-Type" : {
+          "displayName" : "Content-Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Content-Type",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "cn.com.yisquare.processors.http.HandleHttpResponse",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "599c0eed-019b-1000-11b1-f750b1a4efb3",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "LogMessage",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 784.0,
+        "y" : 568.0
+      },
+      "properties" : {
+        "log-level" : "info"
+      },
+      "propertyDescriptors" : {
+        "log-message" : {
+          "displayName" : "Log message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "log-message",
+          "sensitive" : false
+        },
+        "log-level" : {
+          "displayName" : "Log Level",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "log-level",
+          "sensitive" : false
+        },
+        "log-prefix" : {
+          "displayName" : "Log prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "log-prefix",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.LogMessage",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-mapping-nar",
+        "group" : "cn.com.yisquare",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "0989d5fe-13fc-33e5-8dd2-828125bc5dca",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "ExecuteMappingScript",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 48.0,
+        "y" : -96.0
+      },
+      "properties" : {
+        "input-media-type" : "application/json",
+        "read-from-attribute" : "false",
+        "output-media-type" : "application/json",
+        "mapping-script-body" : "local date_yyMMdd = ds.datetime.now().format(\"yyMMdd\");\nlocal date_yyyyMMdd = ds.datetime.now().format(\"yyyyMMdd\");\nlocal time_HHmm = ds.datetime.now().format(\"HHmm\");\nlocal dateTime = ds.datetime.now().format(\"yyyyMMddHHmmss\");\nlocal formatDate(dateStr) = std.join(\"\", std.split(std.substr(dateStr, 0, 10), \"-\"));\nlocal filterNulls = function(arr) std.filter(function(x) x != null, arr);\nlocal checkAndDefault(value, defaultValue) = \n  if value != null && value != \"\" then value else defaultValue;\n\n// 基础字段添加函数：过滤掉空值\nlocal addIfExists = function(field, value) \n  if value != null && value != \"\" then { [field]: value } else {};\n\n// 递归检查值是否为空（空字符串、null 或所有字段都为空的对象）\nlocal isEmpty = function(value) \n  if value == null || value == \"\" then \n    true\n  else if std.type(value) == \"object\" then\n    // 检查对象的所有字段是否都为空\n    std.all(\n      [isEmpty(value[f]) for f in std.objectFields(value)]\n    )\n  else \n    false;\n\n// 节点添加函数：只添加非空节点\nlocal addNodeIfExists = function(nodeName, nodeContent) \n  if !isEmpty(nodeContent) then \n    { [nodeName]: nodeContent } \n  else \n    {};\n\n\n{\n  \"UNB\": {\n    \"UNB01\": {\n      \"S00101\": \"UNOC\",\n      \"S00102\": \"X\"\n    },\n    \"UNB02\": {\n      \"S00201\": payload.sender_id\n    } + addIfExists(\"S00203\", payload.reverse_address),\n    \"UNB03\": {\n      \"S00301\": payload.recipient_id,\n      \"S00303\": \"MSPE_TEST\"\n    },\n    \"UNB04\": {\n      \"S00401\": date_yyyyMMdd,\n      \"S00402\": time_HHmm\n    },\n    \"UNB05\": std.toString(payload.id),\n    \"UNB06\": {\n      \"S00501\": \"\"\n    },\n    \"UNB11\": \"1\",\n    \"UNH\": [\n      {\n        \"UNH01\": payload.message_reference,\n        \"UNH02\": {\n          \"S00901\": \"DESADV\",\n          \"S00902\": \"D\",\n          \"S00903\": \"20B\",\n          \"S00904\": \"UN\",\n          \"S00905\": \"GAVF30\"\n        },\n        \"BGM\": {\n          \"BGM01\": {\n            \"C00201\": \"351\",\n            \"C00204\": \"LAB-ED\"\n          },\n          \"BGM02\": {\n            \"C10601\": payload.delivery_note_number\n          },\n          \"BGM03\": \"9\"\n        },\n        \"DTM\": [\n          {\n            \"DTM01\": {\n              \"C50701\": \"137\",\n              \"C50702\": date_yyyyMMdd,\n              \"C50703\": \"102\"\n            }\n          },\n          {\n            \"DTM01\": {\n              \"C50701\": \"10\",\n              \"C50702\": formatDate(payload.requested_ship_date),\n              \"C50703\": \"102\"\n            }\n          },\n          {\n            \"DTM01\": {\n              \"C50701\": \"2\",\n              \"C50702\": formatDate(payload.requested_delivery_date),\n              \"C50703\": \"102\"\n            }\n          },\n          {\n            \"DTM01\": {\n              \"C50701\": \"132\",\n              \"C50702\": formatDate(payload.estimated_arrival_date),\n              \"C50703\": \"102\"\n            }\n          },\n          {\n            \"DTM01\": {\n              \"C50701\": \"11\",\n              \"C50702\": formatDate(payload.despatch_date),\n              \"C50703\": \"102\"\n            }\n          }\n        ],\n        \"MEA\" : filterNulls ([ \n        if payload.consignment_gross_weight != null && payload.consignment_gross_weight != \"\" then\n        {\n          \"MEA01\" : \"AAX\",\n          \"MEA02\" : {\n            \"C50201\" : \"AAD\"\n          },\n          \"MEA03\" : {\n            \"C17401\" : \"KGM\",\n            \"C17402\" : payload.consignment_gross_weight\n          }\n        },\n        if payload.consignment_net_weight != null && payload.consignment_net_weight != \"\" then\n        {\n          \"MEA01\" : \"AAX\",\n          \"MEA02\" : {\n            \"C50201\" : \"AAL\"\n          },\n         \"MEA03\" : {\n           \"C17401\" : \"KGM\",\n           \"C17402\" : payload.consignment_net_weight\n          }\n        },\n        if payload.consignment_volume!= null && payload.consignment_volume!= \"\" then\n        {\n          \"MEA01\" : \"AAX\",\n          \"MEA02\" : {\n            \"C50201\" : \"ABJ\"\n          },\n          \"MEA03\" : {\n            \"C17401\" : payload.consignment_volume_code,\n            \"C17402\" : payload.consignment_volume\n          }\n        },\n        if payload.packing_weight != null && payload.packing_weight != \"\" then\n        {\n          \"MEA01\" : \"AAX\",\n          \"MEA02\" : {\n            \"C50201\" : \"T\"\n          },\n          \"MEA03\" : {\n            \"C17401\" : \"KGM\",\n            \"C17402\" : payload.packing_weight\n          }\n        },\n        {\n          \"MEA01\" : \"AAE\",\n          \"MEA03\" : {\n            \"C17401\" : payload.loading_unit_code,\n            \"C17402\" : payload.loading_unit_count\n          }\n        }]),\n        \"RFF\": [\n          {\n            \"RFF01\": {\n              \"C50601\": \"CRN\",\n              \"C50602\": payload.consignment_number\n            }\n          }\n        ],\n        \"NAD\" : filterNulls ([\n\t{\n\t  \"NAD01\": \"BY\",\n\t  \"NAD02\": {\n\t\t\"C08201\": payload.buyer_id,\n\t\t\"C08203\": \"92\"\n\t  }\n\t} \n          + addNodeIfExists(\"NAD03\", {\n\t    \"C05801\": payload.buyer_description}) \n          + addNodeIfExists(\"NAD04\", {\n\t    \"C08001\": payload.buyer_name,} \n            + addIfExists(\"C08002\", payload.buyer_name_01)\n\t    + addIfExists(\"C08003\", payload.buyer_name_02)\n\t    + addIfExists(\"C08004\", payload.buyer_name_03))\n\t  + addNodeIfExists(\"NAD05\", {\n\t    \"C05901\": payload.buyer_street} \n\t    + addIfExists(\"C05902\", payload.buyer_street_01))\n\t  + addNodeIfExists(\"NAD06\", payload.buyer_city)\n\t  + addNodeIfExists(\"NAD07\", payload.buyer_sub_country)\n\t  + addNodeIfExists(\"NAD08\", payload.buyer_post_code)\n\t  + addNodeIfExists(\"NAD09\", payload.buyer_country), \n\t{\n\t  \"NAD01\": \"SE\",\n\t  \"NAD02\": {\n\t\t\"C08201\": payload.seller_id,\n\t\t\"C08203\": \"92\"\n\t  }\n\t} \n\t  + addNodeIfExists(\"NAD03\", {\n\t    \"C05801\": payload.seller_description}) \n\t  + addNodeIfExists(\"NAD04\", {\n\t    \"C08001\": payload.seller_name,} \n\t    + addIfExists(\"C08002\", payload.seller_name_01)\n\t    + addIfExists(\"C08003\", payload.seller_name_02)\n\t    + addIfExists(\"C08004\", payload.seller_name_03))\n\t  + addNodeIfExists(\"NAD05\", {\n\t    \"C05901\": payload.seller_street} \n\t  + addIfExists(\"C05902\", payload.seller_street_01))\n\t  + addNodeIfExists(\"NAD06\", payload.seller_city)\n\t  + addNodeIfExists(\"NAD07\", payload.seller_sub_country)\n\t  + addNodeIfExists(\"NAD08\", payload.seller_post_code)\n\t  + addNodeIfExists(\"NAD09\", payload.seller_country)\n\t  + (if !isEmpty(payload.seller_duns) then \n          {\"RFF\" : [ {\n            \"RFF01\" : {\n              \"C50601\" : \"ANK\",\n\t      \"C50602\" :  payload.seller_duns}\n          }]} else {}),\n\t{\n\t  \"NAD01\": \"SF\",\n\t  \"NAD02\": {\n\t\t\"C08201\": payload.ship_from_id,\n\t\t\"C08203\": \"92\"\n\t  }\n\t} \n\t  + addNodeIfExists(\"NAD03\", {\n\t    \"C05801\": payload.ship_from_description}) \n\t  + addNodeIfExists(\"NAD04\", {\n\t    \"C08001\": payload.ship_from_name,} \n\t    + addIfExists(\"C08002\", payload.ship_from_name_01)\n\t    + addIfExists(\"C08003\", payload.ship_from_name_02)\n\t    + addIfExists(\"C08004\", payload.ship_from_name_03))\n\t  + addNodeIfExists(\"NAD05\", {\n\t    \"C05901\": payload.ship_from_street} \n\t    + addIfExists(\"C05902\", payload.ship_from_street_01))\n\t  + addNodeIfExists(\"NAD06\", payload.ship_from_city)\n\t  + addNodeIfExists(\"NAD07\", payload.ship_from_sub_country)\n\t  + addNodeIfExists(\"NAD08\", payload.ship_from_code)\n\t  + addNodeIfExists(\"NAD09\", payload.ship_from_country)\n\t  + (if !isEmpty(payload.ship_from_duns) then \n          {\"RFF\" : [ {\n            \"RFF01\" : {\n              \"C50601\" : \"ANK\",\n\t      \"C50602\" : payload.ship_from_duns\n          }\n          }]} else {}), \n\t{\n\t  \"NAD01\": \"ST\",\n\t  \"NAD02\": {\n\t\t\"C08201\": payload.ship_to_id,\n\t\t\"C08203\": \"92\"\n\t  }\n\t} \n\t  + addNodeIfExists(\"NAD03\", {\n\t    \"C05801\": payload.ship_to_description}) \n\t  + addNodeIfExists(\"NAD04\", {\n\t    \"C08001\": payload.ship_to_name,} \n\t    + addIfExists(\"C08002\", payload.ship_to_name_01)\n\t    + addIfExists(\"C08003\", payload.ship_to_name_02)\n\t    + addIfExists(\"C08004\", payload.ship_to_name_03))\n\t  + addNodeIfExists(\"NAD05\", {\n\t    \"C05901\": payload.ship_to_street} \n\t    + addIfExists(\"C05902\", payload.ship_to_street_01))\n\t  + addNodeIfExists(\"NAD06\", payload.ship_to_city)\n\t  + addNodeIfExists(\"NAD07\", payload.ship_to_sub_country)\n\t  + addNodeIfExists(\"NAD08\", payload.ship_to_code)\n\t  + addNodeIfExists(\"NAD09\", payload.ship_to_country)\n\t  + {\"LOC\" : [{\n          \"LOC01\" : \"11\",\n          \"LOC02\" : {\n            \"C51701\" :  payload.delivery_place_code,\n            \"C51703\" : \"92\"}\n            + addNodeIfExists(\"C51704\", payload.delivery_place_name)\n\t    }]}, \n        if payload.freight_forwarder_id != null && payload.freight_forwarder_id != \"\" then\n\t{\n\t  \"NAD01\": \"FW\",\n\t  \"NAD02\": {\n\t\t\"C08201\": payload.freight_forwarder_id,\n\t\t\"C08203\": \"92\"\n\t  }\n\t} \n\t  + addNodeIfExists(\"NAD03\", {\n\t    \"C05801\": payload.freight_forwarder_description}) \n\t  + addNodeIfExists(\"NAD04\", {\n\t    \"C08001\": payload.freight_forwarder_name,} \n\t    + addIfExists(\"C08002\", payload.freight_forwarder_name_01))\n\t  + addNodeIfExists(\"NAD05\", {\n\t    \"C05901\": payload.freight_forwarder_street} \n\t    + addIfExists(\"C05902\", payload.freight_forwarder_street_01))\n\t  + addNodeIfExists(\"NAD06\", payload.freight_forwarder_city)\n\t  + addNodeIfExists(\"NAD07\", payload.freight_forwarder_sub_country)\n\t  + addNodeIfExists(\"NAD08\", payload.freight_forwarder_code)\n\t  + addNodeIfExists(\"NAD09\", payload.freight_forwarder_country)\n\t  + (if !isEmpty(payload.freight_forwarder_duns) then\n          {\"RFF\" : [ {\n            \"RFF01\" : {\n              \"C50601\" : \"ANK\",\n\t      \"C50602\" :  payload.freight_forwarder_duns\n            } \n          }]} else {}), \n        if payload.carrier_duns != null && payload.carrier_duns != \"\" then\n\t{\n\t  \"NAD01\": \"CA\",\n\t  \"NAD02\": {\n\t    \"C08201\": payload.carrier_duns,\n\t    \"C08203\": \"92\"\n\t  }\n\t} \n\t  + addNodeIfExists(\"NAD03\", {\n\t    \"C05801\": payload.carrier_description}) \n\t  + addNodeIfExists(\"NAD04\", {\n\t    \"C08001\": payload.carrier_name,} \n\t  + addIfExists(\"C08002\", payload.carrier_name_01))\n\t  + addNodeIfExists(\"NAD05\", {\n\t    \"C05901\": payload.carrier_street} \n\t    + addIfExists(\"C05902\", payload.carrier_street_01))\n\t  + addNodeIfExists(\"NAD06\", payload.carrier_city)\n\t  + addNodeIfExists(\"NAD07\", payload.carrier_sub_country)\n\t  + addNodeIfExists(\"NAD08\", payload.carrier_code)\n\t  + addNodeIfExists(\"NAD09\", payload.carrier_country)\n\t  + {\"RFF\" : [ {\n              \"RFF01\" : {\n              \"C50601\" : \"ANK\",\n\t      \"C50602\" : payload.carrier_duns}\n          }]}, \n        ]),\n        \"TOD\": [\n          {\n            \"TOD01\": \"6\",\n            \"TOD03\": {\n              \"C10001\": payload.delivery_condition_code\n            }\n          }\n        ],\n        \"TDT\": [\n          {\n            \"TDT01\": \"12\",\n            \"TDT03\": {\n              \"C22001\": payload.transport_mode_code\n            },\n            \"TDT07\": {\n              \"C40101\": payload.transport_reason_code,\n              \"C40102\": \"X\",\n              \"C40103\": payload.transport_authorisation_id\n            },\n            \"TDT08\": {\n              \"C22201\": payload.transport_means_id,\n              \"C22203\": \"91\"\n            } + addNodeIfExists(\"C22205\", payload.transport_means_country)\n          }\n          + addNodeIfExists(\"TDT10\", {\n              \"C00301\": payload.transport_power_code})\n          + { \n              \"TDT11\": {\n                \"C29001\": \"X\",\n                \"C29003\": \"91\"\n              } \n            } \n          + addNodeIfExists(\"TMD\", {\n            \"TMD01\": {\n              \"C21901\": payload.transport_movement_code\n            }\n          })\n        ]}\n        + (if payload.transport_equipment_id != null && payload.transport_equipment_id != \"\" then \n        {\n          \"EQD\" : [{\n            \"EQD01\" : payload.transport_equipment_code,\n            \"EQD02\" : {\n              \"C23701\" : payload.transport_equipment_id\n            }\n          }]\n        } else {})\n        + { \n        \"CPS\": [\n          local line = payload.desadv_detail[i];\n          {\n            \"CPS01\": std.toString(i + 1),\n            \"CPS03\": \"4\",\n        \"PAC\" : [ {} \n          + addIfExists(\"PAC01\", line.package_count)\n          + (if (line.package_gross_weight !=null && line.package_gross_weight != \"\") ||\n             (line.package_net_weight !=null && line.package_net_weight != \"\") ||\n             (line.package_volume !=null && line.package_volume != \"\") ||\n             (line.package_tara_weight !=null && line.package_tara_weight != \"\")\n          then {\n          \"MEA\" : filterNulls([ \n          if line.package_gross_weight !=null && line.package_gross_weight != \"\" then\n          {\n            \"MEA01\" : \"AAY\",\n            \"MEA02\" : {\n              \"C50201\" : \"G\"\n            },\n            \"MEA03\" : {\n              \"C17401\" : \"KGM\",\n              \"C17402\" : line.package_gross_weight\n            }\n          }, \n          if line.package_net_weight !=null && line.package_net_weight != \"\" then\n           {\n            \"MEA01\" : \"AAY\",\n            \"MEA02\" : {\n              \"C50201\" : \"AAL\"\n            },\n            \"MEA03\" : {\n              \"C17401\" : \"KGM\",\n              \"C17402\" : line.package_net_weight\n            }\n          }, \n          if line.package_volume !=null && line.package_volume != \"\" then\n           {\n            \"MEA01\" : \"AAY\",\n            \"MEA02\" : {\n              \"C50201\" : \"ABJ\"\n            },\n            \"MEA03\" : {\n              \"C17401\" : line.package_volume_code,\n              \"C17402\" : line.package_volume\n            }\n          }, \n          if line.package_tara_weight !=null && line.package_tara_weight != \"\" then\n           {\n            \"MEA01\" : \"AAY\",\n            \"MEA02\" : {\n              \"C50201\" : \"T\"\n            },\n            \"MEA03\" : {\n              \"C17401\" : \"KGM\",\n              \"C17402\" : line.package_tara_weight\n            }\n          }]) } else {})\n          + {\n          \"QTY\" : filterNulls([ \n          if line.package_stackability !=null && line.package_stackability != \"\" then\n          {\n            \"QTY01\" : {\n              \"C18601\" : \"171\",\n              \"C18602\" : line.package_stackability,\n              \"C18603\" : line.package_stackability_code\n            }\n          }, \n          {\n            \"QTY01\" : {\n              \"C18601\" : \"52\",\n              \"C18602\" : line.quantity_per_package,\n              \"C18603\" : line.quantity_per_package_code\n            }\n          } ]),\n          \"PCI\" : [ {\n            \"PCI01\" : \"17\",\n            \"PCI02\" : {\n              \"C21001\" : \"\"\n            },\n            \"PCI04\" : {\n              \"C82701\" : \"1J\",\n              \"C82703\" : \"5\"\n            },\n            \"GIR\" : {\n              \"GIR01\" : \"1\",\n              \"GIR02\" : {\n                \"C20601\" : line.batch_number,\n                \"C20602\" : \"BX\"\n              },\n              \"DTM\" : [ {\n                \"DTM01\" : {\n                  \"C50701\" : \"36\",\n                  \"C50702\" : formatDate(line.expiration_date),\n                  \"C50703\" : \"102\"\n                }\n              }, {\n                \"DTM01\" : {\n                  \"C50701\" : \"94\",\n                  \"C50702\" : formatDate(line.manufacturing_date),\n                  \"C50703\" : \"102\"\n                }\n              } ]\n            },\n            \"GIN\" : [ {\n              \"GIN01\" : \"AW\",\n              \"GIN02\" : {\n                \"C20801\" : line.master_label_id\n              }\n            }, {\n              \"GIN01\" : \"ML\",\n              \"GIN02\" : {\n                \"C20801\" : line.package_label_id,\n                \"C20802\" : \"1JUN\" + payload.seller_duns + line.package_label_id\n              }\n            } ]\n          } ]\n        } ],\n        \"LIN\" : [ \n        {\n          \"LIN03\" : {\n            \"C21201\" : line.item_id,\n            \"C21202\" : \"IN\"\n          }\n        } + (\n        if line.item_sa_code != null && line.item_sa_code != \"\" then\n        {\n          \"PIA\" : [ \n          {\n            \"PIA01\" : \"1\",\n            \"PIA02\" : {\n              \"C21201\" : line.item_sa_code,\n              \"C21202\" : \"SA\"\n            }\n          } + (if line.item_dr_code != null && line.item_dr_code != \"\" then \n          {\n            \"PIA03\" : {\n              \"C21201\" : line.item_dr_code,\n              \"C21202\" : \"DR\"\n            }\n          } else {})\n          + (if line.item_bt_code != null && line.item_bt_code != \"\" then \n          {\n            \"PIA04\" : {\n              \"C21201\" : line.item_bt_code,\n              \"C21202\" : \"BT\"\n            }\n          } else {}) + (if line.item_ag_code != null && line.item_ag_code != \"\" then \n          {\n            \"PIA05\" : {\n              \"C21201\" : line.item_ag_code,\n              \"C21202\" : \"AG\"\n            }\n          }else {}) + (if line.item_gb_code != null && line.item_gb_code != \"\" then \n          {\n            \"PIA06\" : {\n              \"C21201\" : line.item_gb_code,\n              \"C21202\" : \"GB\"\n            }\n          }else {}) ]\n        } else {})\n        + (\n        if line.item_description !=null && line.item_description != \"\"\n        then {\n          \"IMD\" : [ {\n            \"IMD03\" : {\n              \"C27301\" : \"11\",\n              \"C27303\" : \"272\",\n              \"C27304\" : line.item_description\n            }\n          } ]\n        } else {})\n        + {\n          \"QTY\" : [ {\n            \"QTY01\" : {\n              \"C18601\" : \"12\",\n              \"C18602\" : line.quantity,\n              \"C18603\" : line.quantity_code\n            }\n          } ]\n        }\n        + {\n          \"ALI\" : [ {\n            \"ALI01\" : line.product_country_code,\n            \"ALI02\" : \"N\"\n          } ]\n        }\n        + \n        {\n          \"RFF\" : [ \n          {\n            \"RFF01\" : {\n              \"C50601\" : \"AAU\",\n              \"C50602\" : payload.delivery_note_number,\n              \"C50603\" : \"1\"\n            }\n          } + (if payload.delivery_note_date != null && payload.delivery_note_date != \"\" then\n            {\n            \"DTM\" : {\n              \"DTM01\" : {\n                \"C50701\" : \"171\",\n                \"C50702\" : formatDate(payload.delivery_note_date),\n                \"C50703\" : \"102\"\n              }\n            }\n          } else{}),\n          {\n            \"RFF01\" : {\n              \"C50601\" : \"ON\",\n              \"C50602\" : line.order_number,\n              \"C50603\" : std.toString(line.order_line)\n            }\n          }]\n        } + {\n          \"LOC\" : [ {\n            \"LOC01\" : \"7\",\n            \"LOC02\" : {\n              \"C51701\" : payload.delivery_place_code,\n              \"C51703\" : \"92\"\n            }\n          } ]\n         }\n        ]\n      }  for i in std.range(0, std.length(payload.desadv_detail) - 1)\n      ],\n      \"UNT\" : {\n        \"UNT01\" : std.toString(std.length(payload.desadv_detail)),\n        \"UNT02\" : payload.message_reference\n      }\n    } ],\n    \"UNZ\" : {\n      \"UNZ01\" : \"1\",\n      \"UNZ02\" : std.toString(payload.id)\n    }\n  }\n}"
+      },
+      "propertyDescriptors" : {
+        "mapping-script-file" : {
+          "displayName" : "Script File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "mapping-script-file",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "FILE" ]
+          },
+          "sensitive" : false
+        },
+        "input-media-type" : {
+          "displayName" : "Input Media Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "input-media-type",
+          "sensitive" : false
+        },
+        "read-from-attribute" : {
+          "displayName" : "Read From Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "read-from-attribute",
+          "sensitive" : false
+        },
+        "output-media-type" : {
+          "displayName" : "Output Media Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "output-media-type",
+          "sensitive" : false
+        },
+        "mapping-script-body" : {
+          "displayName" : "Script Body",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "mapping-script-body",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "cn.com.yisquare.mapping.ExecuteMappingScript",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "46d062f5-9350-33f7-9e1c-aa2bee1ede97",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "ReplaceText",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 48.0,
+        "y" : -408.0
+      },
+      "properties" : {
+        "Regular Expression" : "(?s)(^.*$)",
+        "Replacement Value" : "{\"error\": \"process Error\"}",
+        "Evaluation Mode" : "Entire text",
+        "Line-by-Line Evaluation Mode" : "All",
+        "Character Set" : "UTF-8",
+        "Maximum Buffer Size" : "1 MB",
+        "Replacement Strategy" : "Regex Replace"
+      },
+      "propertyDescriptors" : {
+        "Regular Expression" : {
+          "displayName" : "Search Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Regular Expression",
+          "sensitive" : false
+        },
+        "Replacement Value" : {
+          "displayName" : "Replacement Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Replacement Value",
+          "sensitive" : false
+        },
+        "Evaluation Mode" : {
+          "displayName" : "Evaluation Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Evaluation Mode",
+          "sensitive" : false
+        },
+        "Text to Prepend" : {
+          "displayName" : "Text to Prepend",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Text to Prepend",
+          "sensitive" : false
+        },
+        "Line-by-Line Evaluation Mode" : {
+          "displayName" : "Line-by-Line Evaluation Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Line-by-Line Evaluation Mode",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        },
+        "Maximum Buffer Size" : {
+          "displayName" : "Maximum Buffer Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Buffer Size",
+          "sensitive" : false
+        },
+        "Replacement Strategy" : {
+          "displayName" : "Replacement Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Replacement Strategy",
+          "sensitive" : false
+        },
+        "Text to Append" : {
+          "displayName" : "Text to Append",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Text to Append",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ReplaceText",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-jdbi-nar",
+        "group" : "cn.com.yisquare",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "PRIMARY",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f7cbe311-88bf-3dfa-a9c8-4dcc3deb38b7",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "AssociationQuery",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -568.0,
+        "y" : 184.0
+      },
+      "properties" : {
+        "Max Wait Time" : "5",
+        "query-db-dcbp-service" : "815dbaba-69c3-31aa-89c5-3feb6836f573",
+        "split-output-payload" : "true",
+        "association-query-xml" : "<mapper>\n    <collection name=\"desadv_header\">\n        <select>select * from desadv_header where is_success=1</select>\n        <collection name=\"desadv_detail\">\n            <select>select * from desadv_detail WHERE parent_id = :id</select>\n        </collection>\n    </collection>\n</mapper>"
+      },
+      "propertyDescriptors" : {
+        "sql-pre-query" : {
+          "displayName" : "SQL Pre-Query",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "sql-pre-query",
+          "sensitive" : false
+        },
+        "Max Wait Time" : {
+          "displayName" : "Max Wait Time",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Wait Time",
+          "sensitive" : false
+        },
+        "query-db-dcbp-service" : {
+          "displayName" : "Database Connection Pooling Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "query-db-dcbp-service",
+          "sensitive" : false
+        },
+        "sql-post-query" : {
+          "displayName" : "SQL Post-Query",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "sql-post-query",
+          "sensitive" : false
+        },
+        "split-output-payload" : {
+          "displayName" : "Split Output Result",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "split-output-payload",
+          "sensitive" : false
+        },
+        "association-query-xml" : {
+          "displayName" : "Association Query XML",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "association-query-xml",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "cn.com.yisquare.jdbi.processors.AssociationQuery",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-http-nar",
+        "group" : "cn.com.yisquare",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "599be22a-019b-1000-d718-5f6d1e606fd9",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "HandleHttpRequest",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -568.0,
+        "y" : 568.0
+      },
+      "properties" : {
+        "Allowed Methods" : "GET, POST, PUT, DELETE, HEAD, OPTIONS",
+        "Endpoint" : "/api/user/{id}",
+        "HTTP Listener Service" : "4f1be558-3b78-3886-8ee7-13c93cac97a3",
+        "Endpoint Strategy" : "Custom"
+      },
+      "propertyDescriptors" : {
+        "Allowed Methods" : {
+          "displayName" : "Allowed Methods",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Allowed Methods",
+          "sensitive" : false
+        },
+        "Endpoint" : {
+          "displayName" : "Endpoint",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Endpoint",
+          "sensitive" : false
+        },
+        "HTTP Listener Service" : {
+          "displayName" : "HTTP Listener Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "HTTP Listener Service",
+          "sensitive" : false
+        },
+        "Endpoint Strategy" : {
+          "displayName" : "Endpoint Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Endpoint Strategy",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "cn.com.yisquare.processors.http.HandleHttpRequest",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "0cc0b776-03ae-35f5-becd-4b7f296210d7",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "LogMessage",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 1024.0,
+        "y" : -96.0
+      },
+      "properties" : {
+        "log-level" : "info"
+      },
+      "propertyDescriptors" : {
+        "log-message" : {
+          "displayName" : "Log message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "log-message",
+          "sensitive" : false
+        },
+        "log-level" : {
+          "displayName" : "Log Level",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "log-level",
+          "sensitive" : false
+        },
+        "log-prefix" : {
+          "displayName" : "Log prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "log-prefix",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.LogMessage",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "No Retry", "Retry", "Original", "Failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "8d510d38-5d31-337e-b19a-bf2dbba10b29",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "InvokeHTTP",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 80.0,
+        "y" : 184.0
+      },
+      "properties" : {
+        "Request Content-Encoding" : "DISABLED",
+        "Request Multipart Form-Data Filename Enabled" : "true",
+        "Request Chunked Transfer-Encoding Enabled" : "false",
+        "HTTP/2 Disabled" : "False",
+        "Connection Timeout" : "5 secs",
+        "Response Cookie Strategy" : "DISABLED",
+        "Socket Read Timeout" : "15 secs",
+        "Socket Idle Connections" : "5",
+        "Request Body Enabled" : "true",
+        "HTTP URL" : "http://192.168.0.148:8181/api/test",
+        "Socket Idle Timeout" : "5 mins",
+        "Response Redirects Enabled" : "True",
+        "Socket Write Timeout" : "15 secs",
+        "Response FlowFile Naming Strategy" : "RANDOM",
+        "Response Cache Enabled" : "false",
+        "Request Date Header Enabled" : "True",
+        "Request Failure Penalization Enabled" : "false",
+        "Response Body Attribute Size" : "256",
+        "Response Generation Required" : "false",
+        "Response Header Request Attributes Enabled" : "false",
+        "HTTP Method" : "POST",
+        "Request Content-Type" : "${mime.type}",
+        "Request Digest Authentication Enabled" : "false",
+        "Response Cache Size" : "10MB",
+        "Response Body Ignored" : "false"
+      },
+      "propertyDescriptors" : {
+        "Request Content-Encoding" : {
+          "displayName" : "Request Content-Encoding",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Content-Encoding",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "Request Multipart Form-Data Filename Enabled" : {
+          "displayName" : "Request Multipart Form-Data Filename Enabled",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Multipart Form-Data Filename Enabled",
+          "sensitive" : false
+        },
+        "Request Chunked Transfer-Encoding Enabled" : {
+          "displayName" : "Request Chunked Transfer-Encoding Enabled",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Chunked Transfer-Encoding Enabled",
+          "sensitive" : false
+        },
+        "Response Header Request Attributes Prefix" : {
+          "displayName" : "Response Header Request Attributes Prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Response Header Request Attributes Prefix",
+          "sensitive" : false
+        },
+        "HTTP/2 Disabled" : {
+          "displayName" : "HTTP/2 Disabled",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "HTTP/2 Disabled",
+          "sensitive" : false
+        },
+        "Connection Timeout" : {
+          "displayName" : "Connection Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Connection Timeout",
+          "sensitive" : false
+        },
+        "Response Cookie Strategy" : {
+          "displayName" : "Response Cookie Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Response Cookie Strategy",
+          "sensitive" : false
+        },
+        "Request Password" : {
+          "displayName" : "Request Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Password",
+          "sensitive" : true
+        },
+        "Socket Read Timeout" : {
+          "displayName" : "Socket Read Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Socket Read Timeout",
+          "sensitive" : false
+        },
+        "Socket Idle Connections" : {
+          "displayName" : "Socket Idle Connections",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Socket Idle Connections",
+          "sensitive" : false
+        },
+        "Request Body Enabled" : {
+          "displayName" : "Request Body Enabled",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Body Enabled",
+          "sensitive" : false
+        },
+        "HTTP URL" : {
+          "displayName" : "HTTP URL",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "HTTP URL",
+          "sensitive" : false
+        },
+        "Request OAuth2 Access Token Provider" : {
+          "displayName" : "Request OAuth2 Access Token Provider",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Request OAuth2 Access Token Provider",
+          "sensitive" : false
+        },
+        "Socket Idle Timeout" : {
+          "displayName" : "Socket Idle Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Socket Idle Timeout",
+          "sensitive" : false
+        },
+        "Response Redirects Enabled" : {
+          "displayName" : "Response Redirects Enabled",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Response Redirects Enabled",
+          "sensitive" : false
+        },
+        "Socket Write Timeout" : {
+          "displayName" : "Socket Write Timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Socket Write Timeout",
+          "sensitive" : false
+        },
+        "Request Header Attributes Pattern" : {
+          "displayName" : "Request Header Attributes Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Header Attributes Pattern",
+          "sensitive" : false
+        },
+        "Response FlowFile Naming Strategy" : {
+          "displayName" : "Response FlowFile Naming Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Response FlowFile Naming Strategy",
+          "sensitive" : false
+        },
+        "Response Cache Enabled" : {
+          "displayName" : "Response Cache Enabled",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Response Cache Enabled",
+          "sensitive" : false
+        },
+        "Request Date Header Enabled" : {
+          "displayName" : "Request Date Header Enabled",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Date Header Enabled",
+          "sensitive" : false
+        },
+        "Request Failure Penalization Enabled" : {
+          "displayName" : "Request Failure Penalization Enabled",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Failure Penalization Enabled",
+          "sensitive" : false
+        },
+        "Response Body Attribute Size" : {
+          "displayName" : "Response Body Attribute Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Response Body Attribute Size",
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "Response Generation Required" : {
+          "displayName" : "Response Generation Required",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Response Generation Required",
+          "sensitive" : false
+        },
+        "Request User-Agent" : {
+          "displayName" : "Request User-Agent",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request User-Agent",
+          "sensitive" : false
+        },
+        "Response Header Request Attributes Enabled" : {
+          "displayName" : "Response Header Request Attributes Enabled",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Response Header Request Attributes Enabled",
+          "sensitive" : false
+        },
+        "HTTP Method" : {
+          "displayName" : "HTTP Method",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "HTTP Method",
+          "sensitive" : false
+        },
+        "Request Username" : {
+          "displayName" : "Request Username",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Username",
+          "sensitive" : false
+        },
+        "Request Content-Type" : {
+          "displayName" : "Request Content-Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Content-Type",
+          "sensitive" : false
+        },
+        "Response Body Attribute Name" : {
+          "displayName" : "Response Body Attribute Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Response Body Attribute Name",
+          "sensitive" : false
+        },
+        "Request Digest Authentication Enabled" : {
+          "displayName" : "Request Digest Authentication Enabled",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Digest Authentication Enabled",
+          "sensitive" : false
+        },
+        "Request Multipart Form-Data Name" : {
+          "displayName" : "Request Multipart Form-Data Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Multipart Form-Data Name",
+          "sensitive" : false
+        },
+        "Response Cache Size" : {
+          "displayName" : "Response Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Response Cache Size",
+          "sensitive" : false
+        },
+        "Response Body Ignored" : {
+          "displayName" : "Response Body Ignored",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Response Body Ignored",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-http-nar",
+        "group" : "cn.com.yisquare",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b84f3f61-289c-3d40-a531-4eae8be122b6",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "HandleHttpRequest",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -560.0,
+        "y" : -96.0
+      },
+      "properties" : {
+        "Allowed Methods" : "GET, POST, PUT, DELETE, HEAD, OPTIONS",
+        "Endpoint" : "/api/test",
+        "HTTP Listener Service" : "4f1be558-3b78-3886-8ee7-13c93cac97a3",
+        "Endpoint Strategy" : "Custom"
+      },
+      "propertyDescriptors" : {
+        "Allowed Methods" : {
+          "displayName" : "Allowed Methods",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Allowed Methods",
+          "sensitive" : false
+        },
+        "Endpoint" : {
+          "displayName" : "Endpoint",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Endpoint",
+          "sensitive" : false
+        },
+        "HTTP Listener Service" : {
+          "displayName" : "HTTP Listener Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "HTTP Listener Service",
+          "sensitive" : false
+        },
+        "Endpoint Strategy" : {
+          "displayName" : "Endpoint Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Endpoint Strategy",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "cn.com.yisquare.processors.http.HandleHttpRequest",
+      "yieldDuration" : "300 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-http-nar",
+        "group" : "cn.com.yisquare",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "599bfab7-019b-1000-eb1e-6d5562cd33d2",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "HandleHttpResponse",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 104.0,
+        "y" : 544.0
+      },
+      "properties" : {
+        "Status Code" : "200",
+        "HTTP Listener Service" : "4f1be558-3b78-3886-8ee7-13c93cac97a3",
+        "Content-Type" : "application/json"
+      },
+      "propertyDescriptors" : {
+        "Status Code" : {
+          "displayName" : "Status Code",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Status Code",
+          "sensitive" : false
+        },
+        "HTTP Listener Service" : {
+          "displayName" : "HTTP Listener Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "HTTP Listener Service",
+          "sensitive" : false
+        },
+        "Content-Type" : {
+          "displayName" : "Content-Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Content-Type",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "cn.com.yisquare.processors.http.HandleHttpResponse",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d20a1c68-019d-1000-c82c-f64bd61df5cb",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "LogMessage",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 728.0,
+        "y" : 216.0
+      },
+      "properties" : {
+        "log-level" : "info"
+      },
+      "propertyDescriptors" : {
+        "log-message" : {
+          "displayName" : "Log message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "log-message",
+          "sensitive" : false
+        },
+        "log-level" : {
+          "displayName" : "Log Level",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "log-level",
+          "sensitive" : false
+        },
+        "log-prefix" : {
+          "displayName" : "Log prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "log-prefix",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.LogMessage",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "author" : "Administrator",
+    "flowIdentifier" : "httpDemo",
+    "timestamp" : 0
+  }
 }
