@@ -1,5 +1,10 @@
 {
-  "externalControllerServices" : { },
+  "externalControllerServices" : {
+    "743f2f13-19bf-3086-8165-2852d81d00d5" : {
+      "identifier" : "743f2f13-19bf-3086-8165-2852d81d00d5",
+      "name" : "Kafka3ConnectionService"
+    }
+  },
   "flow" : {
     "createdTimestamp" : 1782036189363,
     "description" : "demo desc",
@@ -235,7 +240,12 @@
     "defaultBackPressureObjectThreshold" : 10000,
     "defaultFlowFileExpiration" : "0 sec",
     "executionEngine" : "INHERITED",
-    "externalControllerServiceReferences" : { },
+    "externalControllerServiceReferences" : {
+      "743f2f13-19bf-3086-8165-2852d81d00d5" : {
+        "identifier" : "743f2f13-19bf-3086-8165-2852d81d00d5",
+        "name" : "Kafka3ConnectionService"
+      }
+    },
     "flowFileConcurrency" : "UNBOUNDED",
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
     "funnels" : [ ],
@@ -278,8 +288,9 @@
         "Kafka Key Attribute Encoding" : "utf-8",
         "Record Metadata Strategy" : "FROM_PROPERTIES",
         "Header Encoding" : "UTF-8",
-        "max.request.size" : "1 MB",
-        "Kafka Connection Service" : "1f1c8b78-b250-3e80-91c1-45caef724c2a",
+        "max.request.size" : "2 MB",
+        "Topic Name" : "test123",
+        "Kafka Connection Service" : "743f2f13-19bf-3086-8165-2852d81d00d5",
         "Publish Strategy" : "USE_VALUE",
         "Failure Strategy" : "Route to Failure",
         "partitioner.class" : "org.apache.kafka.clients.producer.internals.DefaultPartitioner",
@@ -368,6 +379,13 @@
           "dynamic" : false,
           "identifiesControllerService" : false,
           "name" : "partition",
+          "sensitive" : false
+        },
+        "Kafka Connection Service" : {
+          "displayName" : "Kafka Connection Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Kafka Connection Service",
           "sensitive" : false
         },
         "Publish Strategy" : {
@@ -594,6 +612,6 @@
   "snapshotMetadata" : {
     "author" : "Administrator",
     "flowIdentifier" : "demo",
-    "timestamp" : 1782036190713
+    "timestamp" : 1782036411445
   }
 }
